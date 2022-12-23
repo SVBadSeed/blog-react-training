@@ -1,0 +1,63 @@
+@import "components/vars";
+@import "components/mixins";
+
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #181818;
+  font-family: -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", "Noto Sans", "Liberation Sans",
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.4rem;
+  color: $white;
+  line-height: 1.5;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+  @include breakpoint($tablet-bp) {
+    &.show-sidebar {
+      overflow: hidden;
+    }
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+ol, ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+input,
+label {
+  outline: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+

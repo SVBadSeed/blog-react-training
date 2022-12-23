@@ -1,0 +1,22 @@
+@import "src/components/vars";
+@import "src/components/mixins";
+
+.main {
+  padding: 10rem 0 8rem $sidebar-width;
+
+  @include breakpoint($tablet-bp) {
+    padding: 7rem 0 5rem;
+  }
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+  @include breakpoint($mobile-bp) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
