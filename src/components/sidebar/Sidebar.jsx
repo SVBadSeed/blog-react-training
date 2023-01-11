@@ -4,7 +4,9 @@ import './Sidebar.scss'
 import Profile from "./Profile"
 import SidebarFooter from "./SidebarFooter"
 
-const Sidebar = () => {
+const Sidebar = ({setActive}) => {
+
+
     return (
         <aside className='sidebar'>
             <div className='sidebar__header'>
@@ -13,7 +15,7 @@ const Sidebar = () => {
             <div className='sidebar__content'>
                 <Profile/>
             </div>
-            <SidebarFooter/>
+            <SidebarFooter setActive={setActive}/>
         </aside>
     )
 }

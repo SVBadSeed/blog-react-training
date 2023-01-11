@@ -1,6 +1,7 @@
 import React from 'react'
 import './Nav.scss'
 import NavForm from "./NavForm"
+import {Link} from "react-router-dom"
 
 const HeaderRight = () => {
     const navRight = [
@@ -13,14 +14,14 @@ const HeaderRight = () => {
             <div className="nav">
                 <ul className="nav__list">
                     <li className="nav__item">
-                        <a className='nav__link' href="">
+                        <Link to={`cabinet`} className='nav__link'>
                             {navRight[0].title}
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav__item">
-                        <a className='nav__link' href="">
+                        <Link className='nav__link' href="">
                             {navRight[1].title}
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>

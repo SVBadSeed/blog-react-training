@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom";
 
 const PostImage = (props) => {
     const post = props.allPosts
@@ -13,7 +14,7 @@ const PostImage = (props) => {
             </div>
             <div className='post__content'>
                 <div className='post__title'>
-                    <a href='#'>{post.title}</a>
+                    <Link to={`/post`} href='#'>{post.title}</Link>
                 </div>
                 <p className='post__description'>
                     {post.description}

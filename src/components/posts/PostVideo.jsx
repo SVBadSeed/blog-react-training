@@ -8,7 +8,7 @@ const PostVideo = (props) => {
             <button className='post__button-close' type='button' onClick={props.deletePost}/>
             <div className='post__header'>
                 <div className='embed'>
-
+                    <img src={post.image} alt='/'/>
                 </div>
             </div>
             <div className='post__content'>

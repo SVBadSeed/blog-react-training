@@ -1,7 +1,7 @@
 import React from 'react'
 import './SidebarFooter.scss'
 
-const SidebarFooter = () => {
+const SidebarFooter = ({setActive}) => {
 
     const btnData = {
         btnRed: 'Мои работы',
@@ -11,7 +11,8 @@ const SidebarFooter = () => {
     return (
         <div className='sidebar__footer'>
             <a className='btn btn--red' href=''>{btnData.btnRed}</a>
-            <button className='btn btn--blue' type='button' data-modal='contact-modal'>{btnData.btnBlue}</button>
+            <button onClick={() => setActive(true)} className='btn btn--blue' type='button'
+                    data-modal='contact-modal'>{btnData.btnBlue}</button>
         </div>
     )
 }

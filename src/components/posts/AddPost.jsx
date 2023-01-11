@@ -2,23 +2,33 @@ import React, {useState} from 'react'
 import './AddPost.scss'
 import send from '../../images/send.svg'
 import add from '../../images/add.svg'
+import postTwo from "../../images/post-2.jpg"
+import {useDispatch} from "react-redux"
+import {addPostAction} from "../store/postReducer"
 
 const AddPost = () => {
+    const dispatch = useDispatch()
     const [inputName, setInputName] = useState('')
 
     const inputNameHandler = (event) => {
         setInputName(event.target.value)
-
     }
 
     const submitHandler = (event) => {
         event.preventDefault()
 
-        const costData = {
-            description: inputName
+        const newPost = {
+            image: postTwo,
+            title: 'Изображение',
+            description: inputName,
+            time: '20.11.2020',
+            category: 'Создание сайтов',
+            read: 'Читать',
+            type: 'image',
+            id: Math.random()
         }
+        dispatch(addPostAction(newPost))
 
-        console.log(costData)
         setInputName('')
     }
 
@@ -39,7 +49,6 @@ const AddPost = () => {
                     </button>
                 </div>
             </form>
-
         </div>
     )
 }

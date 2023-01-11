@@ -1,6 +1,8 @@
 import React from 'react'
 import './Nav.scss'
 import SubNav from "./SubNav"
+import {Link} from "react-router-dom"
+
 
 const HeaderLeft = (props) => {
     const navItems = props.NavItems
@@ -10,25 +12,25 @@ const HeaderLeft = (props) => {
             <nav className='nav'>
                 <ul className='nav__list'>
                     <li className="nav__item">
-                        <a className='nav__link' href="">
+                        <Link to={`main`} className='nav__link'>
                             {navItems[0].title}
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav__item">
-                        <a className='nav__link' href="">
+                        <Link className='nav__link' href="/">
                             {navItems[1].title}
-                        </a>
+                        </Link>
                         <SubNav nest={navItems[1].nesting}/>
                     </li>
                     <li className="nav__item">
-                        <a className='nav__link' href="">
+                        <Link className='nav__link' href="/">
                             {navItems[2].title}
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav__item">
-                        <a className='nav__link' href="">
+                        <Link className='nav__link' href="/">
                             {navItems[3].title}
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>
