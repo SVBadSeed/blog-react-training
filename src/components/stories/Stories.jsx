@@ -1,12 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import StoriesItem from "./StoriesItem"
 import './Stories.scss'
 import storiesOne from '../../images/stories/stories-1.jpg'
 import storiesTwo from '../../images/stories/stories-2.jpg'
 import storiesFree from '../../images/stories/stories-3.jpg'
 import storiesFor from '../../images/stories/stories-4.jpg'
+import StoryModal from "../modal/StoryModal"
 
-const Stories = ({setActive}) => {
+const Stories = () => {
+    const [modalActive, setModalActive] = useState(false)
     const storiesAll = [
         {
             image: storiesOne,
@@ -34,11 +36,11 @@ const Stories = ({setActive}) => {
         }
     ]
 
-
     return (
         <div className="stories">
+            <StoryModal active={modalActive} setActive={setModalActive}/>
             {storiesAll.map(stories => (
-                <StoriesItem key={stories.id} stories={stories} setActive={setActive}/>
+                <StoriesItem key={stories.id} stories={stories} setActive={setModalActive}/>
             ))}
         </div>
     )

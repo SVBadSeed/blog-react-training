@@ -2,7 +2,7 @@
 @import "src/components/mixins";
 
 .modal {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,7 @@
   transform: none;
 }
 
-.modal.show {
+.modal.active {
   transform: scale(1);
 }
 

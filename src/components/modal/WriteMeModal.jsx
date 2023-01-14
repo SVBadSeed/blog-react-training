@@ -5,7 +5,7 @@ import '../form/Form.scss'
 const WriteMeModal = ({active, setActive}) => {
 
     return (
-        <div className={active ? 'modal show' : 'modal'} onClick={() => setActive(false)}>
+        <div className={active ? 'modal active' : 'modal'} onClick={() => setActive(false)}>
             <div className='modal__content modal__content--contact' onClick={e => e.stopPropagation()}>
                 <button className='modal__close' type='button'>
                     <img src='' alt=''/>
