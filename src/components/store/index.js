@@ -1,12 +1,13 @@
-import {combineReducers, createStore} from "redux"
-import {postReducer} from "./postReducer"
-import {storiesReducer} from "./storiesReducer"
-import {commentReducer} from "./commentReducer"
+import {combineReducers, configureStore} from "@reduxjs/toolkit"
+import postsSlice from './postReducer'
+import commentsSlice from './commentReducer'
+
 
 const rootReducer = combineReducers({
-    posts: postReducer,
-    stories: storiesReducer,
-    comments: commentReducer
+    posts: postsSlice,
+    comments: commentsSlice
 })
 
-export const store = createStore(rootReducer)
+export const store = configureStore({
+    reducer: rootReducer
+})
