@@ -4,7 +4,7 @@ import './AllPosts.scss'
 import PostText from "./PostText"
 import PostVideo from "./PostVideo"
 import {useDispatch, useSelector} from "react-redux"
-import { deletePostAction} from "../store/postReducer"
+import {deletePostAction, searchFilter} from "../store/postReducer"
 
 const AllPosts = () => {
     const dispatch = useDispatch()
@@ -12,7 +12,6 @@ const AllPosts = () => {
     const deletePost = (post) => {
         dispatch(deletePostAction(post.id))
     }
-
 
     return (
         <div className='Posts__all'>
