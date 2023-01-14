@@ -6,7 +6,6 @@ import SidebarFooter from "./SidebarFooter"
 
 const Sidebar = ({setActive}) => {
 
-
     return (
         <aside className='sidebar'>
             <div className='sidebar__header'>
