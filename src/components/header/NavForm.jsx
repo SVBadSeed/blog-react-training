@@ -2,6 +2,7 @@ import React from 'react'
 import './NavForm.scss'
 
 const NavForm = () => {
+
     return (
         <form action="/" className="search" method='post'>
             <div className="search__container">

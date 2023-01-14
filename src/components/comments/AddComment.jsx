@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import avatar from "../../images/profile-avatar.jpg"
 import {addCommentAction} from "../store/commentReducer"
 import {useDispatch} from "react-redux"
+import './Comments.scss'
 
 const AddComment = () => {
     const dispatch = useDispatch()

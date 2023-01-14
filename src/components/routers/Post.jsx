@@ -8,7 +8,7 @@ import video from '../../images/video.png'
 import {useSelector} from "react-redux"
 import '../comments/Comments.scss'
 import Comments from "../comments/Comments"
-import AddComment from "../comments/AddComment";
+import AddComment from "../comments/AddComment"
 
 const Post = () => {
     const comments = useSelector(state => state.comments.comments)

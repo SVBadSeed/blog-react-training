@@ -3,7 +3,7 @@ import './Comments.scss'
 
 const Comments = ({allComments}) => {
 
-    console.log(allComments)
+
     return (
         <li className='commends__item'>
             <div className="commends__header">
